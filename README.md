@@ -1,4 +1,4 @@
-# lamp
+# irrigate
 
 ## Project setup
 ```

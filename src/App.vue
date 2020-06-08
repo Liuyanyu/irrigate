@@ -1,32 +1,46 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <div class="text"></div>
+    <illumination></illumination>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import illumination from "./views/illumination";
+export default {
+  components: {
+    illumination
   }
-}
+};
+</script>
+<style lang="less">
+// body {
+//   margin: 0;
+//   padding: 0;
+//   background: url("./assets/img/bg1.png") no-repeat;
+//   background-size: 100%;
+//   width: 100%;
+//   height: 100%;
+//   padding-right: 0 !important;
+//   .v-modal {
+//     z-index: 0 !important;
+//   }
+//   a {
+//     text-decoration: none;
+//     font-size: 20px;
+//     color: white;
+//   }
+//   .text {
+//     background: url("./assets/img/top.png") no-repeat;
+//     background-size: 100%;
+//     height: 65px;
+//     text-align: center;
+//   }
+//   .el-progress-bar__outer {
+//     height: 4px !important;
+//     width: 260px !important;
+//     margin-right: 10px;
+//     margin-top: 8px;
+//   }
+// }
 </style>

@@ -1,23 +1,32 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+// 智慧照明子路由
+import model from "../views/compont/model.vue";
+import partition from "../views/compont/partition.vue";
+import tactics from "../views/compont/tactics.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  // 默认显示路由
   {
-    path: "/",
-    name: "Home",
-    component: Home
+    path: "",
+    redirect: "/partition"
   },
+  // 模式管理
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/model",
+    component: model
+  },
+  // 分区管理
+  {
+    path: "/partition",
+    component: partition
+  },
+  // 策略管理
+  {
+    path: "/tactics",
+    component: tactics
   }
 ];
 
